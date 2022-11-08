@@ -66,7 +66,7 @@ sendButton.addEventListener("click",
         // CP random number generator
         cpNumber.innerHTML = Math.floor(Math.random() * 100000) + 1;
         // Price OUTPUT
-        printCost.innerHTML = moltiplication;
+        printCost.innerHTML = moltiplication + "€";
 
         // Km Reset
         howLong.value = null
