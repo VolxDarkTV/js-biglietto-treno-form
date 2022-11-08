@@ -7,12 +7,82 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
-
-
+.container-xl{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0px;
+    align-items: center;
+    background-color: rgb(234, 15, 66);
+}
+h1{
+    color: white;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-height: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px black;
+}
+.container-m{
+    display: flex;
+    gap: 50px;
+}
+.centrature{
+    text-align: center;
+}
 .style-box{
     width: 200px;
     height: 30px;
     border: solid black 1px;
     border-radius: 5px;
     text-align: center;
+}
+#button-box{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.buttons-style{
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border: solid rgb(255, 191, 0) 1px;
+    border-radius: 5px;
+    color: white;
+    background-color: gray;
+}
+.ticket-container{
+    display: none;
+    flex-direction: column;
+    min-height: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+}
+#container-s{
+    display: flex;
+    border: solid gray 1px;
+    border-right: 0;
+    border-left: 0;
+}
+
+/* Box Print NAME */
+#lateral-ticket-box{
+    padding: 20px;
+    background-color: gray;
+}
+/* Prinit NAME */
+#print-name{
+    font-weight: bold;
+}
+/* Box Print OFFERT & COST */
+#lateral-ticket-info-box{
+    display: flex;
+    gap: 20px;
+    padding: 20px; 
+    background-color: aliceblue;
 }

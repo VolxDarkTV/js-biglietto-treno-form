@@ -14,41 +14,109 @@
 </head>
 <body>
 
-    <section class="container">
+    <div class="container-xl">
 
-        <!-- Name & Surname -->
-        <input type="text" id="name-surname" class="style-box">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <section class="container">
+
+            <div class="container-m">
+
+                <!-- Name & Surname -->
+                <div class="centrature">
+                    <h4>Nome</h4>
+                    <input type="text" id="name-surname" class="style-box">
+                        
+                    </input>
+                </div>
+                <!-- Km -->
+                <div class="centrature">
+                    <h4>Distanza</h4>
+                    <input type="text" id="km" class="style-box">
+                
+                    </input>
+                </div>
+                <!-- Age -->
+                <div class="centrature">
+                    <h4>Et&agrave;</h4>
+                    <input type="text" id="age" class="style-box">
+                
+                    </input>
+                </div>
+
+            </div>
+
+            <div id="button-box">
+
+                <!-- GENERATION -->
+                <button id="send" class="buttons-style">
+                    Genera
+                </button>
+                <!-- DELETE -->
+                <button id="delete" class="buttons-style">
+                    Annulla
+                </button>
+
+            </div>
             
-        </input>
-        <!-- Km -->
-        <input type="text" id="km" class="style-box">
-    
-        </input>
-        <!-- Age -->
-        <input type="text" id="age" class="style-box">
-    
-        </input>
-         <button id="send">
-            send
-         </button>
-    </section>
+        </section>
+        
 
-    <section class="ticket-container">
-        <!-- print name -->
-        <div id="print-name">
+        <section id="train-ticket" class="ticket-container">
+            <h2>DETTAGLIO PASSEGGERI</h2>
             
-        </div>
-        <!-- print offert -->
-        <div id="print-km">
+            <div id="container-s">
+                <!-- Box Print NAME -->
+                <div id="lateral-ticket-box">
+                    <!-- print name -->
+                    <h3>NOME PASSEGGERO</h3>
+                    <div id="print-name">
+                    </div>
+                </div>
 
-        </div>
-        <!-- print cost -->
-        <div id="print-cost">
+                <!-- Box Print OFFERT & COST -->
+                <div id="lateral-ticket-info-box">
 
-        </div>
+                    <!-- Print offert -->
+                    <div>
 
-    </section>
-    <h1 id="title"></h1>
+                        <h4>Offerta</h4>
+                        <div id="print-offert">
+                        </div>
+
+                    </div>
+                    <!-- Carrozza -->
+                    <div>
+
+                        <h4>Carrozza</h4>
+                        <div id="print-carrozza">
+                        </div>
+
+                    </div>
+                    <!-- Codice CP -->
+                    <div>
+
+                        <h4>Codice CP</h4>
+                        <div id="print-cp">
+                        </div>
+
+                    </div>
+
+                    <!-- Print cost -->
+                    <div>
+                        <h4>Costo Biglietto</h4>
+                        <div id="print-cost">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    
+        </section>
+
+
+    </div>
+
+
     <script src="js/script.js">
     </script>
 </body>

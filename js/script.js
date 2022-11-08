@@ -1,5 +1,6 @@
 // Button
 const sendButton = document.getElementById("send");
+const deleteButton = document.getElementById("delete");
 // PrintZone
 const printName = document.getElementById("print-name");
 const printCost = document.getElementById("print-cost");
@@ -7,20 +8,27 @@ const printCost = document.getElementById("print-cost");
 let howLong = document.getElementById("km");
 // Ask Age
 let howOldAreYou = document.getElementById("age")
-
+// Carrozza
+let carrozzaNumber = document.getElementById("print-carrozza");
+// CP
+let cpNumber = document.getElementById("print-cp");
 // User INPUT
 // Add name & surname
 const nameSurnameInput = document.getElementById("name-surname");
 
+// GENERATION Button
 sendButton.addEventListener("click",
     function(){
-        // Name
+        // tickets appair
+        let trainTicket = document.getElementById("train-ticket");
+        trainTicket.style.display = "flex";
+        // Name 
         const nome = nameSurnameInput.value;
         printName.innerHTML = nome;
         nameSurnameInput.value = null;
         // Km
         const kmSource = howLong.value;
-
+        
         // Age
         const ageSource = howOldAreYou.value;
 
@@ -36,28 +44,48 @@ sendButton.addEventListener("click",
             moltiplication = (howLong.value * priceForKm)*0.80;
             // arrotondare per 2 DECIMALI
             moltiplication = moltiplication.toFixed(2);
-            // OUTPUT
-            // document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou.value} anni, e vuole percorrere ${howLong.value}km, il prezzo da noi accuratamente valutato, e scontato del 20%, per lei e: €`
+            // Offert
+            document.getElementById("print-offert").innerHTML = `Sconto Minori`
+            
 
         }else if(howOldAreYou.value > 65){ // ELSE IF over 65 => -40%
 
             moltiplication = (howLong.value * priceForKm)*0.60;
             moltiplication = moltiplication.toFixed(2);
-            // OPUTPUT
-            // document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou.value} anni, e vuole percorrere ${howLong.value}km, il prezzo da noi accuratamente valutato, e scontato del 40%, per lei e: €`
+            // Offert
+            document.getElementById("print-offert").innerHTML = `Tariffa Agevolata`
+
         }else{ // ELSE full price
 
             howLong.value * priceForKm;
-            // document.getElementById("title").innerHTML = `Grazie infinite per aver scelto la nostra compagnia! Lei ha ${howOldAreYou.value} anni, e vuole percorrere ${howLong.value}km, il prezzo da noi accuratamente valutato per lei e: €`
-
+            // Offert
+            document.getElementById("print-offert").innerHTML = `Tariffa base`
         } 
-        // Price
+        // Carrozza random number generator
+        carrozzaNumber.innerHTML = Math.floor(Math.random() * 10) + 1;
+        // CP random number generator
+        cpNumber.innerHTML = Math.floor(Math.random() * 100000) + 1;
+        // Price OUTPUT
         printCost.innerHTML = moltiplication;
+
+        // Km Reset
+        howLong.value = null
+        // Age Reset
+        howOldAreYou.value = null
     }
 )
-// Add km
 
-// Age
+// DELETE Button
+deleteButton.addEventListener("click", 
+    function(){
+        howLong.value = null
+        howOldAreYou.value = null
+        nameSurnameInput.value = null;
+        // tickets disappair
+        let trainTicket = document.getElementById("train-ticket");
+        trainTicket.style.display = "none";
+    }
+)
 
 
     
