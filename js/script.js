@@ -39,7 +39,7 @@ sendButton.addEventListener("click",
         const priceForKm = 0.21;
         let moltiplication = howLong.value * priceForKm;
         // IF minorenni => -20%
-        if(howOldAreYou.value < 18){
+        if(howOldAreYou.value === "minorenne"){
             
             moltiplication = (howLong.value * priceForKm)*0.80;
             // arrotondare per 2 DECIMALI
@@ -48,7 +48,7 @@ sendButton.addEventListener("click",
             document.getElementById("print-offert").innerHTML = `Sconto Minori`
             
 
-        }else if(howOldAreYou.value > 65){ // ELSE IF over 65 => -40%
+        }else if(howOldAreYou.value === "over65"){ // ELSE IF over 65 => -40%
 
             moltiplication = (howLong.value * priceForKm)*0.60;
             moltiplication = moltiplication.toFixed(2);
